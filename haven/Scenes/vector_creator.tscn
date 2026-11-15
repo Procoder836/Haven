@@ -7,7 +7,7 @@
 size = Vector2(50, 50)
 
 [node name="VectorCreator" type="Area2D" unique_id=1691508775]
-position = Vector2(103, 78)
+position = Vector2(-456, -55)
 script = ExtResource("1_tunum")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1785898604]
