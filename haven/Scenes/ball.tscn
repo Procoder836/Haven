@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://tfqgrmjtol86"]
+
+[ext_resource type="Script" uid="uid://dlcsgkao485pf" path="res://Scenes/rigid_body_2d.gd" id="1_ij5cq"]
+[ext_resource type="Texture2D" uid="uid://cw5f8asshbxtp" path="res://Assets/kenney_rolling-ball-assets/PNG/Default/ball_red_large.png" id="2_376qj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk4cr"]
+radius = 31.622776
+
+[node name="Ball" type="RigidBody2D" unique_id=59704681]
+position = Vector2(280, 202)
+script = ExtResource("1_ij5cq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1075743834]
+shape = SubResource("CircleShape2D_yk4cr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1226543955]
+texture = ExtResource("2_376qj")
