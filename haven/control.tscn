@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://c7kdlrmbha1om"]
+
+[ext_resource type="Texture2D" uid="uid://w0o7x8wyn0ww" path="res://Assets/Screenshot 2026-11-15 at 3.39.07 PM.png" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://d37saq702bbu6" path="res://control.gd" id="1_qtu10"]
+[ext_resource type="FontFile" uid="uid://cjqs5a4vu3v4k" path="res://Assets/GrapeSoda.ttf" id="2_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_selw6"]
+bg_color = Color(0.3168223, 0.64322567, 0.8000206, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 11
+
+[node name="Control" type="Control" unique_id=1064665292]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtu10")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1348470737]
+modulate = Color(0.23, 0.23, 0.23, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0fbet")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1202677738]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -78.0
+offset_right = 229.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+theme_override_styles/normal = SubResource("StyleBoxFlat_selw6")
+text = "Start Game
+"
+
+[node name="Button2" type="Button" parent="." unique_id=1438896291]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.054
+anchor_top = 0.63000005
+anchor_right = 1.054
+anchor_bottom = 0.63000005
+offset_left = -867.208
+offset_top = 11.759979
+offset_right = -409.208
+offset_bottom = 167.75998
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+theme_override_styles/normal = SubResource("StyleBoxFlat_selw6")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=11252218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -243.0
+offset_right = 239.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_62e2m")
+theme_override_font_sizes/font_size = 75
+text = "Bouncy Boomerings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="onstartpressed"]
+[connection signal="pressed" from="Button2" to="." method="onexitpressed"]
