@@ -16,5 +16,6 @@ scale = Vector2(1.066, 1)
 texture = ExtResource("2_u8fvm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=182458352]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_selw6")
 debug_color = Color(0.7932071, 0.3601767, 0.59994155, 0.41960785)
