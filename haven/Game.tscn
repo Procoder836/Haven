@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://384spmua6cy2"]
+
+[ext_resource type="PackedScene" uid="uid://bqf87vsfvgpay" path="res://Scenes/vector_creator.tscn" id="1_xkndl"]
+[ext_resource type="PackedScene" uid="uid://tfqgrmjtol86" path="res://Scenes/ball.tscn" id="2_u44n3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_selw6"]
+size = Vector2(1165, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsvle"]
+size = Vector2(49, 679)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spaq0"]
+size = Vector2(1160, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch7m2"]
+size = Vector2(29, 667)
+
+[node name="Node2D" type="Node2D" unique_id=493975937]
+
+[node name="VectorCreator" parent="." unique_id=1691508775 instance=ExtResource("1_xkndl")]
+position = Vector2(223, 370)
+
+[node name="Ball" parent="." unique_id=59704681 instance=ExtResource("2_u44n3")]
+position = Vector2(218, 373)
+
+[node name="Walls" type="Node2D" parent="." unique_id=1316247042]
+
+[node name="wall" type="StaticBody2D" parent="Walls" unique_id=1797256497]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall" unique_id=681509875]
+position = Vector2(581.5, 9)
+shape = SubResource("RectangleShape2D_selw6")
+
+[node name="wall2" type="StaticBody2D" parent="Walls" unique_id=431255727]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall2" unique_id=1133121823]
+position = Vector2(-20, 323)
+shape = SubResource("RectangleShape2D_tsvle")
+
+[node name="wall3" type="StaticBody2D" parent="Walls" unique_id=505217281]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall3" unique_id=1386913513]
+position = Vector2(567, 645.25)
+shape = SubResource("RectangleShape2D_spaq0")
+
+[node name="wall4" type="StaticBody2D" parent="Walls" unique_id=1416873848]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall4" unique_id=480451312]
+position = Vector2(1161, 333.5)
+shape = SubResource("RectangleShape2D_ch7m2")
+
+[connection signal="vector_created" from="VectorCreator" to="Ball" method="launch"]
